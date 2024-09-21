@@ -1,0 +1,1070 @@
+/* NORD Black */
+@font-face {
+    font-family: 'NordBlack';
+    src: url('../assets/fonts/nord/NORD-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* NORD Black Italic */
+@font-face {
+    font-family: 'NordBlackItalic';
+    src: url('../assets/fonts/nord/NORD-BlackItalic.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* NORD Bold */
+@font-face {
+    font-family: 'NordBold';
+    src: url('../assets/fonts/nord/NORD-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* NORD Bold Italic */
+@font-face {
+    font-family: 'NordBoldItalic';
+    src: url('../assets/fonts/nord/NORD-BoldItalic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* NORD Book */
+@font-face {
+    font-family: 'NordBook';
+    src: url('../assets/fonts/nord/NORD-Book.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* NORD Book Italic */
+@font-face {
+    font-family: 'NordBookItalic';
+    src: url('../assets/fonts/nord/NORD-BookItalic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* NORD Italic */
+@font-face {
+    font-family: 'NordItalic';
+    src: url('../assets/fonts/nord/NORD-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* NORD Light */
+@font-face {
+    font-family: 'NordLight';
+    src: url('../assets/fonts/nord/NORD-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* NORD Light Italic */
+@font-face {
+    font-family: 'NordLightItalic';
+    src: url('../assets/fonts/nord/NORD-LightItalic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* NORD Medium */
+@font-face {
+    font-family: 'NordMedium';
+    src: url('../assets/fonts/nord/NORD-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* NORD Medium Italic */
+@font-face {
+    font-family: 'NordMediumItalic';
+    src: url('../assets/fonts/nord/NORD-MediumItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* NORD Regular */
+@font-face {
+    font-family: 'NordRegular';
+    src: url('../assets/fonts/nord/NORD-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* NORD Thin */
+@font-face {
+    font-family: 'NordThin';
+    src: url('../assets/fonts/nord/NORD-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* NORD Thin Italic */
+@font-face {
+    font-family: 'NordThinItalic';
+    src: url('../assets/fonts/nord/NORD-ThinItalic.woff2') format('woff2');
+    font-weight: 100;
+    font-style: italic;
+}
+
+.important-info {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
+    text-align: center; 
+    height: 5vh; 
+    padding: 5px 0px 5px 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.important-info-link {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
+    text-align: center; 
+    height: 5vh; 
+    padding: 10px 0px 10px 0px;
+
+}
+
+.important-info-link:hover {
+    cursor: pointer;
+}
+
+.important-info p {
+    margin: 0; 
+    font-size: 11px;
+    font-family: 'NordRegular', sans-serif;
+    color: white;
+}
+
+.important-info-link a {
+    margin: 0; 
+    font-size: 11px;
+    font-family: 'NordRegular', sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.important-info svg {
+    fill: white;
+    height: 18px;
+    width: 18px;
+}
+
+.important-info-link svg {
+    fill: rgba(255, 255, 255, 0.7);
+    height: 18px;
+    width: 18px;
+}
+
+
+
+.important-info-link:hover a, 
+.important-info-link:hover svg {
+    color: white;
+    fill: white;
+}
+
+
+
+.important-info img {
+    display: block; 
+}
+
+body {
+    margin: 0;
+    background-color: #010314;
+}
+
+
+/* Navbar initially below header alert */
+.navbar {
+    background-color: rgba(44, 44, 44, 0.35);
+    backdrop-filter: blur(6px); /* Adds a blur effect */
+    -webkit-backdrop-filter: blur(6px); /* For Safari support */
+    padding: 7px 8px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Initially relative to stay below the header */
+    max-width: 315px; /* Start with a smaller width */
+    width: 100%;
+    margin: 10px auto; /* Center the navbar */
+    gap: 10px; /* Gap between buttons */
+    transition: max-width 0.7s ease, background-color 0.7s ease, gap 0.7s ease; /* Smooth gap and width transition */
+    white-space: nowrap; /* Ensure that text stays in one line */
+}
+
+
+/* Fixed navbar style after scrolling past the header */
+.navbar.fixed {
+    position: fixed;
+    top: 10px; /* Locks the navbar 10px from the top when scrolling */
+    max-width: 420px; /* Smoothly expand the navbar to 500px */
+    width: 100%; /* Ensure the width adapts to the screen */
+    left: 0;
+    right: 0;
+    margin: 0 auto; /* Keep the navbar centered */
+    z-index: 1000; /* Ensure it stays on top */
+    background-color: rgba(44, 44, 44, 0.55); /* Slightly darker background */
+    transition: max-width 0.7s ease, background-color 0.7s ease, gap 0.7s ease; /* Smooth transition for width and gap */
+}
+
+/* Style the buttons */
+.navbar button {
+    padding: 5px 10px;
+    font-size: 11px;
+    font-family: 'NordRegular', sans-serif;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0px;
+    border-radius: 12px;
+    cursor: pointer;
+    white-space: nowrap; /* Ensure the button text stays on one line */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.7s ease; /* Smooth padding transition */
+}
+
+/* Hover effect for the buttons */
+.navbar button:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Special styling for the highlighted button (initially hidden) */
+.hc-highlighted {
+    display: inline-block; /* The button takes space */
+    color: black !important;
+    background-color: rgb(255, 255, 255) !important;
+    opacity: 0; /* Set opacity to 0 initially */
+    max-width: 0; /* Initially no width */
+    padding: 0; /* Avoid taking space with padding */
+    pointer-events: none; /* Prevent interaction when hidden */
+    white-space: nowrap; /* Ensure the button text stays on one line */
+    overflow: hidden; /* Prevent content overflow during transition */
+    transition: max-width 0.4s ease, opacity 0.5s ease 0.4s, padding 0.4s ease; /* Smooth transitions with delay */
+}
+
+/* When the user scrolls, the button grows and fades in */
+.navbar.fixed .hc-highlighted {
+    max-width: 120px; /* Smoothly expand to desired width */
+    opacity: 1; /* Fade in the button */
+    padding: 5px 10px; /* Add padding back smoothly */
+    pointer-events: all; /* Allow interaction */
+}
+
+/* When the user scrolls back up, hide the button smoothly */
+.hc-highlighted.hide {
+    max-width: 0; /* Smoothly shrink the button */
+    opacity: 0; /* Smooth fade-out */
+    padding: 0; /* Shrink padding */
+    pointer-events: none; /* Disable interaction while fading out */
+    transition: max-width 0.4s ease, opacity 0.4s ease, padding 0.4s ease; /* Ensure all transitions are in sync */
+}
+
+/* Hover effect for the highlighted button */
+.hc-highlighted:hover {
+    color: rgb(17, 17, 17) !important;
+    background-color: rgb(226, 226, 226) !important;
+}
+
+
+.header-button {
+    padding: 8px 18px;
+    font-size: 12px;
+    font-family: 'NordRegular', sans-serif;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border-width: 0px;
+    border-radius: 20px;
+    cursor: pointer;
+    white-space: nowrap; /* Ensure the button text stays on one line */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.7s ease; /* Smooth padding transition */
+}
+
+/* Hover effect for the buttons */
+.header-button:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+}
+/* Navbar placeholder, this will take the height of the navbar when it's fixed */
+.navbar-placeholder {
+    height: 0;
+    transition: height 0.7s ease; /* Smooth transition for height */
+}
+
+
+.home {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    position: relative; /* Ensures SVG is positioned within this section */
+    background: radial-gradient(140% 107.13% at 50% 10%, transparent 37.41%, rgb(238, 51, 51) 99.27%, #00000000 100%);
+    margin: 0px 25px;
+    border-radius: 30px;
+    overflow: hidden; /* Ensures content (like SVG) doesn't extend beyond the container */
+}
+
+/* Center the text */
+.home div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Ensure text is above the SVG */
+}
+
+.home h1, h2, p {
+    margin: 0; 
+    font-size: 11px;
+    font-family: 'NordRegular', sans-serif;
+    background: radial-gradient(50% 150% at 50% 0, #fff 60%, hsla(0, 0%, 100%, .8) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    .home h1 {
+        font-size: 7vw !important; /* Larger text on smaller screens */
+    }
+
+    .home h2 {
+        font-size: 5vw !important;
+    }
+    .home h3 {
+        font-size: 4vw !important;
+    }
+    .home h4 {
+        font-size: 4vw !important;
+    }
+
+    .home p {
+        font-size: 4vw !important;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .home h1 {
+        font-size: 9vw !important; /* Even larger text for very small screens */
+    }
+
+    .home h2 {
+        font-size: 5vw !important;
+    }
+    .home h3 {
+        font-size: 4vw !important;
+    }
+    .home h4 {
+        font-size: 4vw !important;
+    }
+
+    .home p {
+        font-size: 4vw !important;
+    }
+
+}
+
+
+.home h1, h2, h3, h4, p {
+
+
+    background: radial-gradient(50% 150% at 50% 0, #fff 60%, hsla(0, 0%, 100%, .8) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.home h1 {
+    font-size: 60px;
+    font-family: 'NordBold', sans-serif;
+    margin-bottom: 5px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.home h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.home p {
+    font-size: 14px;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Style the SVG */
+.home .svg-background {
+    position: absolute;
+    right: -175px; /* Moves the SVG off-center to the right */
+    bottom: -25vh;
+    width: auto;
+    height: 100vh;
+    z-index: 0; /* Ensure the SVG is behind the text */
+    opacity: 0.15; /* Add overlay effect */
+    fill: red;
+    overflow: hidden; /* Make sure it doesn’t extend beyond the .home section */
+}
+
+/* Clip the SVG when it overflows */
+.home .svg-background {
+    clip-path: inset(0 0 0 0); /* Ensures it stays within the home section */
+}
+
+
+
+
+
+
+.home-button-1 {
+    padding: 8px 18px;
+    font-size: 14px;
+    font-family: 'NordRegular', sans-serif;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border-width: 0px;
+    border-radius: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.home-button-1:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.home-button-1 svg {
+    fill: black;
+    height: 14px;
+}
+
+.home-button-1 svg {
+    transition: opacity 0.3s ease, width 0.3s ease, height 0.3s ease; /* Transition for opacity and size */
+    width: 14px; /* Consistent width */
+    height: 14px;
+}
+
+.home-button-1:hover svg {
+    opacity: 0.8; /* Fade effect on hover */
+    width: 14px; /* Slightly larger width on hover */
+    height: 16px; /* Slightly larger height on hover */
+}
+
+
+.timeline {
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px;
+}
+
+.timeline-container {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.timeline-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the right to avoid overlap with the line */
+    position: relative;
+    margin-right: 40px;
+}
+
+.timeline-date {
+    margin-bottom: 20px;
+    text-align: right; /* Align text to the right */
+}
+
+.timeline-date p {
+    font-family: 'NordRegular', sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(44, 44, 44, 0.95);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 0px;
+}
+
+.timeline-date h3 {
+    margin: 10px 0px;
+    font-family: 'NordRegular', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.timeline-date h4 {
+    margin: 10px 0px;
+    font-family: 'NordThin', sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0.9;
+    color: #fff;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Move the line outside the content of the left section */
+    width: 4px;
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 4px;
+    margin: 0px 20px;
+}
+
+.timeline-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  
+}
+
+.timeline-card {
+    background-color: #1c1c1e73;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.timeline-card h4 {
+    font-family: 'NordRegular', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.timeline-card p {
+    font-size: 14px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+    .timeline-container {
+        flex-direction: column;
+    }
+
+    .timeline-left {
+        align-items: center;
+        padding-right: 0;
+        margin: 0;
+    }
+
+    .timeline-line {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: red;
+    padding: 5px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    color: white !important;
+    font-family: 'NordBlack', sans-serif !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 10; /* Ensures the "Live" badge stays on top */
+    transition: transform 0.3s ease; /* Smooth transition when the carousel item becomes active */
+}
+
+.overlay p {
+    margin: 0;
+    font-size: 18px !important;
+    font-weight: bold;
+    color: white !important;
+    font-family: 'NordBlack', sans-serif !important;
+}
+
+.overlay-title {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: white !important;
+    font-family: 'NordBlack', sans-serif !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 10; /* Ensures the "Live" badge stays on top */
+    transition: transform 0.3s ease; /* Smooth transition when the carousel item becomes active */
+}
+
+.overlay-title h1 {
+    margin: 0;
+    font-size: 18px;
+    text-align: right;
+    font-weight: bold;
+    color: white !important;
+    font-family: 'NordBlack', sans-serif !important;
+}
+
+.overlay-subtitle {
+    margin: 0;
+    font-size: 13px;
+    text-align: right;
+    font-weight: bold;
+    background: rgb(178, 178, 178);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'NordBlack', sans-serif !important;
+}
+
+.home-titles {
+    bottom: 10%;
+    position: absolute;
+}
+
+
+.timeline-title {
+    font-size: 48px;
+    font-family: 'NordBlack', sans-serif !important;
+    color: white;
+    text-align: center;
+
+    background: radial-gradient(50% 150% at 50% 0, #fff 60%, hsla(0, 0%, 100%, .8) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.invest-titles {
+    flex-direction: column !important;
+    margin-bottom: 20px;
+}
+
+
+
+.invest {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    position: relative; /* Ensures SVG is positioned within this section */
+    background: radial-gradient(120% 120% at 50% 100%,transparent 40%,rgb(238, 51, 51) 70%,#00000000 100%);
+    margin: 0px 25px;
+    border-radius: 30px;
+    overflow: hidden; /* Ensures content (like SVG) doesn't extend beyond the container */
+}
+
+/* Center the text */
+.invest div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 1; /* Ensure text is above the SVG */
+}
+
+.invest h1, h2, p {
+    margin: 0; 
+    font-size: 11px;
+    font-family: 'NordRegular', sans-serif;
+    background: radial-gradient(50% 150% at 50% 0, #fff 60%, hsla(0, 0%, 100%, .8) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.invest h1, h2, h3, h4, p {
+
+
+    background: radial-gradient(50% 150% at 50% 0, #fff 60%, hsla(0, 0%, 100%, .8) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.invest h1 {
+    font-size: 60px;
+    font-family: 'NordBold', sans-serif;
+    margin-bottom: 5px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.invest h2 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.invest p {
+    font-size: 14px;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Style the SVG */
+.invest .svg-background {
+    position: absolute;
+    right: -175px; /* Moves the SVG off-center to the right */
+    bottom: -25vh;
+    width: auto;
+    height: 100vh;
+    z-index: 0; /* Ensure the SVG is behind the text */
+    opacity: 0.15; /* Add overlay effect */
+    fill: red;
+    overflow: hidden; /* Make sure it doesn’t extend beyond the .invest section */
+}
+
+/* Clip the SVG when it overflows */
+.invest .svg-background {
+    clip-path: inset(0 0 0 0); /* Ensures it stays within the home section */
+}
+
+
+
+
+
+
+.invest-button-1 {
+    padding: 8px 18px;
+    font-size: 14px;
+    font-family: 'NordRegular', sans-serif;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border-width: 0px;
+    border-radius: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.invest-button-1:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.invest-button-1 svg {
+    fill: black;
+    height: 14px;
+}
+
+.invest-button-1 svg {
+    transition: opacity 0.3s ease, width 0.3s ease, height 0.3s ease; /* Transition for opacity and size */
+    width: 14px; /* Consistent width */
+    height: 14px;
+}
+
+.invest-button-1:hover svg {
+    opacity: 0.8; /* Fade effect on hover */
+    width: 14px; /* Slightly larger width on hover */
+    height: 16px; /* Slightly larger height on hover */
+}
+
+
+
+
+
+
+
+.styles_divider__elk7j::before {
+	bottom: 0;
+	z-index: 0;
+	content: "";
+	width: 500px;
+	height: 40px;
+	position: absolute;
+	left: calc(50% - 250px);
+	border-bottom: 1px solid;
+	border-image-source: linear-gradient(90deg,transparent,rgba(234, 21, 21, 0.5) 50%,transparent);
+	border-image-slice: 1;
+	background: radial-gradient(50% 100% at 50% 100%,rgba(255, 137, 137, 0.1) 0,rgba(239, 18, 18, 0) 100%);
+}
+
+
+.styles_divider__elk7j::after {
+	top: 0;
+	z-index: 0;
+	content: "";
+	width: 1000px;
+	height: 80px;
+	position: absolute;
+	left: calc(50% - 500px);
+	border-top: 1px solid;
+	border-image-source: linear-gradient(90deg,transparent,rgba(240, 67, 67, 0.5) 50%,transparent);
+	border-image-slice: 1;
+	background: radial-gradient(43.9% 100% at 50% 0,rgba(216, 21, 21, 0.15) 0,rgba(141, 11, 11, 0) 100%);
+}
+
+
+.styles_divider__elk7j {
+	width: 100%;
+	height: 1px;
+	position: relative;
+}
+
+.invest-titles {
+    margin-top: 75px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.donation-form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	padding: 25px;
+    background-color: rgba(44, 44, 44, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+}
+
+.donation-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Explicitly target form-group to ensure label is stacked above the input */
+.form-group {
+    display: flex;
+    flex-direction: column; /* Stack label above input */
+    margin-bottom: 20px;
+}
+
+/* Styling for form labels */
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-family: 'NordRegular', sans-serif;
+    color: white;
+    text-align: left;
+}
+
+/* Styling for form inputs */
+.form-group input[type="text"] {
+    font-size: 14px;
+    font-family: 'NordRegular', sans-serif;
+    color: white;
+    background-color: transparent;
+    padding: 12px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group input[type="email"] {
+    font-size: 14px;
+    font-family: 'NordRegular', sans-serif;
+    color: white;
+    background-color: transparent;
+    padding: 12px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Specific to Name Group (First Name and Last Name) */
+.name-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Stack each label above input in Name Group */
+.name-group .input-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack label above input */
+    flex: 1;
+}
+
+/* Handling Expiration, CVC, and Zip Code */
+.card-details-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Stack each label above input in the card details */
+.card-details-group .input-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack label above input */
+    flex: 1;
+}
+
+/* Center the button within its container */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    margin-top: 0px; /* Optional: Add space above the button */
+}
+
+/* Adjust the button styling */
+.invest-button-1 {
+    margin: 10px 0px;
+}
+
+
+
+/* Checkbox Styles */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'NordRegular', sans-serif;
+    color: white;
+    user-select: none;
+}
+
+/* Hide the default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkbox-container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: transparent;
+    border-radius: 3px;
+}
+
+/* On hover, change background color */
+.checkbox-container:hover input ~ .checkmark {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* When the checkbox is checked, add blue background */
+.checkbox-container input:checked ~ .checkmark {
+    background-color: rgb(40, 123, 219);
+}
+
+/* Add a checkmark indicator */
+.checkbox-container .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark indicator */
+.checkbox-container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.logo {
+    width: 50vw;
+    height: auto;
+    margin-bottom: 75px;
+}
+
+
+
+@media (max-width: 768px) {
+    .logo {
+        width: 80vw;
+        height: auto;
+        margin-bottom: 75px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 80vw;
+        height: auto;
+        margin-bottom: 75px;
+    }
+
+}
